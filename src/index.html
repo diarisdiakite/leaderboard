@@ -3,11 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Exercise</title>
+    <title>Leaderboard</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+  <header>
+    <div id="navbar" class="navbar hide ">  <!--remove hide --> 
+      <h2 class="title-navbar">Awesome Scores</h2>
+      <ul class="nav-list" id="navList">
+        <!-- navItems load from javascript -->
+      </ul>
+    </div>
+  </header>
+  <main>
+    <!-- Title / Date -->
+    <header>
+      <!-- <div id="currentDateTime"> -->
+      <h1 class="feature-title">Leaderboard</h1>
+      </header>      
+    <!-- Display all scores -->
+    <div class="feature-container">
 
-    <script src="../dist/main.js"></script>
+      <section class="feature-list">
+        <h2 class="feature-subTitle" id="list-subtitle">Recent scores</h2>
+        <div class="display-section" id="list"></div>
+      </section>
+      
+      <hr class="hide">
+      
+      <!-- Add new score form  ADD _hide_ TO CLASS LIST AFTER ADJUSTING-->
+      <div class="div"> <!-- hide --> 
+        <h2 class="feature-subTitle">Add a new score</h2>
+        <div id="inputs">
+          <input class="name-input" id="user" name="user" type="text" placeholder="User">
+          <input class="points-input" id="score" name="score" type="number" placeholder="Score">
+          <button class="add-button" id="addScore" type="submit">Add</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section hide" id="footer-section"> <!--remove class hide --> 
+      
+  </footer>
+
+  <!-- Scripts -->
+  <!-- script type="module" src="assets/js/index.js"></script>
+  <script type="module" src="assets/js/index.js"></script> -->
 </body>
 </html>
