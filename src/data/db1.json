@@ -1,0 +1,35 @@
+{
+  "games": 
+  {
+    "DDGames": [
+    {
+      "scores": [
+        {
+          "id": 1,
+          "user": "Didy",
+          "score": 100
+        },
+        {
+          "id": 2,
+          "user": "Chadid",
+          "score": 100
+        },
+        {
+          "id": 3,
+          "user": "LWD",
+          "score": 100
+        },
+        {
+          "user": "Hello",
+          "score": "100",
+          "id": 4
+        },
+        {
+          "user": "Didy2",
+          "score": "100000",
+          "id": 5
+        }
+      ]
+    }
+  ]}
+}
