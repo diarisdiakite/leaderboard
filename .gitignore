@@ -1,1 +1,5 @@
 node_modules/
+global.js
+createNewGame.js
+lesson_global.txt
+lesson.txt
