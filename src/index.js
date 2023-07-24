@@ -1,18 +1,16 @@
 import './style.css'
+import { displayScores } from './modules/eventFunctions/displayScores';
 import footerText from './modules/globalElements/footer.js';
 
-
-/* 
-  Only EventListeners are listed here
-*/
 
 const listSubtitle = document.getElementById('list-subtitle')
 const refreshButton = document.createElement('button');
 refreshButton.classList.add('button', 'add-button')
 refreshButton.textContent = 'Refresh';
 listSubtitle.appendChild(refreshButton);
-refreshButton.addEventListener('click', async () => {
-})
+
+displayScores();
+
 
 const addButton = document.querySelector();
 const clearInputFields = () => {
