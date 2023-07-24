@@ -20,6 +20,5 @@ addButton.addEventListener('click', async () => {
   clearInputFields();
 });
 
-// footer
 const myFooter = document.getElementById('footer-section');
 myFooter.innerHTML += footerText;
