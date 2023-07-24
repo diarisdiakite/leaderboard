@@ -1,6 +1,4 @@
 import './style.css'
-import { displayScores } from './modules/eventFunctions/displayScores.js';
-import addEventFunction from './modules/eventFunctions/addScore.js';
 import footerText from './modules/globalElements/footer.js';
 
 
@@ -13,13 +11,10 @@ const refreshButton = document.createElement('button');
 refreshButton.classList.add('button', 'add-button')
 refreshButton.textContent = 'Refresh';
 listSubtitle.appendChild(refreshButton);
-refreshButton.addEventListener('click', async (e) => {
-  e.preventDefault();
-  await displayScores()
-  //window.location.reload();
+refreshButton.addEventListener('click', async () => {
 })
 
-const addButton = document.querySelector('#addScore');
+const addButton = document.querySelector();
 const clearInputFields = () => {
   document.getElementById('user').value = '';
   document.getElementById('score').value = '';
