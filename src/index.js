@@ -1,14 +1,24 @@
-import _ from 'lodash';
 import './style.css';
+import displayScores from './modules/eventFunctions/displayScores.js';
+import footerText from './modules/globalElements/footer.js';
 
-function component() {
-  const element = document.createElement('div');
+const listSubtitle = document.getElementById('list-subtitle');
+const refreshButton = document.createElement('button');
+refreshButton.classList.add('button', 'add-button');
+refreshButton.textContent = 'Refresh';
+listSubtitle.appendChild(refreshButton);
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+displayScores();
 
-  return element;
-}
+const addButton = document.querySelector();
+const clearInputFields = () => {
+  document.getElementById('user').value = '';
+  document.getElementById('score').value = '';
+};
 
-document.body.appendChild(component());
+addButton.addEventListener('click', async () => {
+  clearInputFields();
+});
+
+const myFooter = document.getElementById('footer-section');
+myFooter.innerHTML += footerText;
