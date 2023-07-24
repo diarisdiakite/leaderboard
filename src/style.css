@@ -1,7 +1,263 @@
-body {
-  background-color: bisque;
+:root {
+  --my-main-black: rgb(0, 0, 0);
 }
 
-.hello {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}/*  */
+
+h1 {
+  margin: 0.5em 0;
+}
+
+hr {
+  width: 15%;
+  margin: auto;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 4px;
+  margin-top: 3em;
+}
+
+header {
+  width: 90%;
+}
+
+.feature-title {
+  font-size: 35px;
+  font-weight: 800;
+  margin-left: 5%;
+}
+ 
+.feature-title h1 {
+  text-align: left;
+}
+
+.feature-container {
+  width: 80%;
+  margin: 10% auto;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+}
+
+.feature-subTitle {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0;
+}
+
+.feature-list {
+  align-items: center;
+  width: 45%;
+  margin-top: 15px auto 0 auto;
+  text-align: center;
+}
+
+.div {
+  width: 40%; /* remove width */
+  display: flex;
+  margin-top: 15px auto 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  font-family: 'Lato', sans-serif;
+  border: none;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 4rem;
+  border-radius: 4px;
+  box-shadow: rgba(119, 117, 117, 0.66) 0 1px 4px;
+  background-color: #fff;
+}
+
+.feature-stack {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.feature-stack:nth-child(even) {
+  background-color: rgb(225, 225, 225);
+}
+
+.display-section {
+  width: 80%; /* remove width */
+  border: 3px solid black;
+  margin: 2rem auto; /* auto */
+  max-height: 63vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.name-input {
+  height: 2rem;
+  padding: 5px;
+  font-family: 'Lato', sans-serif;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  border: solid 1px rgb(0, 0, 0);
+}
+
+.points-input {
+  height: 2rem;
+  padding: 5px;
+  font-family: 'Lato', sans-serif;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  border: solid 1px rgb(0, 0, 0);
+}
+
+.add-button {
+  border: none;
+  height: 2rem;
+  width: 4.5rem;
+  font-family: 'Lato', sans-serif;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.66) 0 1px 4px;
+  cursor: pointer;
+  align-self: end;
+}
+
+.add-button:hover,
+button:hover {
+  background-color: rgb(209, 200, 190);
+}
+
+#inputs {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+}
+
+.title-navbar {
+  width: 50%;
+  margin: 0 1%;
+  padding: 1%;
+}
+
+.nav-list {
+  width: 50%;
+  display: flex;
+  list-style-type: none;
+  margin: 0 1%;
+  padding: 1%;
+  justify-content: flex-end;
+  background-color: whitesmoke;
+}
+
+.contact-info {
+  margin: 1% auto;
+}
+
+.contact-info h1 {
+  text-align: center;
+  margin: 5% auto;
+}
+
+.displayed-section {
+  width: 100vw;
+  min-height: 10vh;
+  margin-top: 0;
+}
+
+/* Footer section */
+
+.footer-section {
+  border: 1.5px solid black;
+  border-radius: 0.1%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
+  width: 95%;
+  bottom: 0;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  position: absolute;
+  left: 2.5%;
+}
+
+.footer-text {
+  padding: 1rem;
+  position: relative;
+  margin-right: 20px;
+}
+
+/* Contact section */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: 400;
+  align-self: center;
+  text-decoration: underline;
+}
+
+.contact-text {
+  margin-bottom: 0;
+}
+
+.contact-text2 {
+  margin-top: 5px;
+  position: relative;
+  align-self: center;
+}
+
+.contact-details li {
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+  right: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* Date section */
+
+#currentDateTime {
+  width: 30%;
+  margin-left: 100%;
+  font-size: small;
+}
+
+/* ADD STYLING TO NAVBAR */
