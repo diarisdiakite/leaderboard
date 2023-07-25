@@ -1,29 +1,22 @@
-import './style.css'
-import { displayScores } from './modules/eventFunctions/displayScores.js';
+import './style.css';
+import displayScores from './modules/eventFunctions/displayScores.js';
 import addEventFunction from './modules/eventFunctions/addScore.js';
 import footerText from './modules/globalElements/footer.js';
-import deleteScoresFunction from './modules/eventFunctions/removeScores.js';
-import updateDate from './modules/globalElements/date.js';
 
-//export { displayScores };
+let newDataAdded = false;
 
-/* 
-
-  Only EventListeners are listed here
-
-
-*/
-
-const listSubtitle = document.getElementById('list-subtitle')
+const listSubtitle = document.getElementById('list-subtitle');
 const refreshButton = document.createElement('button');
-refreshButton.classList.add('button', 'add-button')
+refreshButton.classList.add('button', 'add-button');
 refreshButton.textContent = 'Refresh';
 listSubtitle.appendChild(refreshButton);
 refreshButton.addEventListener('click', async (e) => {
   e.preventDefault();
-  await displayScores()
-  //window.location.reload();
-})
+  if (!newDataAdded) {
+    await displayScores();
+    newDataAdded = true;
+  }
+});
 
 const addButton = document.querySelector('#addScore');
 const clearInputFields = () => {
@@ -36,7 +29,5 @@ addButton.addEventListener('click', async () => {
   clearInputFields();
 });
 
-
-// footer
 const myFooter = document.getElementById('footer-section');
 myFooter.innerHTML += footerText;
