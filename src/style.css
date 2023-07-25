@@ -13,14 +13,23 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+.flex-colum {
+  display: flex;
+  flex-direction: column;
+}
+
 .flex {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background: url(./assets/images/artcore-studios-monopolyscreens011-min.webp) no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -55,12 +64,17 @@ header {
   text-align: center;
   display: flex;
   align-items: flex-start;
+  /* background-color: whitesmoke; */
 }
 
 .feature-subTitle {
   font-weight: 600;
   text-align: center;
   margin-top: 0;
+  color: lightskyblue;
+  height: 100%;
+  width: 80%;
+  /* background-color: whitesmoke; */
 }
 
 .feature-list {
@@ -70,7 +84,7 @@ header {
 }
 
 .div {
-  width: 40%; /* remove width */
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,6 +107,7 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 0.5em;
+  background-color: white;
 }
 
 .feature-stack:nth-child(even) {
@@ -100,24 +115,25 @@ button {
 }
 
 .display-section {
-  width: 80%; /* remove width */
+  width: 80%; 
   border: 3px solid black;
-  margin: 2rem auto; /* auto */
+  margin: 2rem auto; 
   max-height: 63vh;
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
-.name-input {
-  height: 2rem;
-  padding: 5px;
-  font-family: 'Lato', sans-serif;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
-  border: solid 1px rgb(0, 0, 0);
+#inputs {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
+
+.name-input,
 .points-input {
   height: 2rem;
   padding: 5px;
@@ -142,15 +158,6 @@ button {
 .add-button:hover,
 button:hover {
   background-color: rgb(209, 200, 190);
-}
-
-#inputs {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-  align-items: center;
-  justify-content: center;
 }
 
 /* navbar */
@@ -195,15 +202,14 @@ button:hover {
 /* Footer section */
 
 .footer-section {
-  border: 1.5px solid black;
+  border-top: 1.5px solid black;
   border-radius: 0.1%;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
-  width: 95%;
+  width: 100%;
+  height: 5%;
   bottom: 0;
-  margin: 0 auto 1rem auto;
   text-align: center;
   position: absolute;
-  left: 2.5%;
+  background-color: white;
 }
 
 .footer-text {
@@ -257,4 +263,54 @@ button:hover {
   font-size: small;
 }
 
-/* ADD STYLING TO NAVBAR */
+/* Winners */
+
+.results {
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  z-index: -1;
+}
+
+.finalists {
+  width: 90%;
+  height: 50vh;
+  margin: 0 auto;
+  /* background-color: blue; */
+}
+
+.winner {
+  bottom: 0;
+  width: 0%;
+  height: 50%;
+  margin: 50% auto;
+  background-color: blue;
+}
+
+.first,
+.second, 
+.third {
+  bottom: 0;
+  width: 33%;
+  border-left: 1px solid var(--my-main-black);
+  border-right: 1px solid var(--my-main-black);
+  align-self: flex-end;
+}
+
+.first {
+  height: 100%;
+  border-top: 1px solid var(--my-main-black);
+  background-color: lightskyblue;
+}
+
+.second {
+  height: 90%;
+  border-top: 1px solid var(--my-main-black);
+  background-color: azure;
+}
+
+.third {
+  height: 80%;
+  border-top: 1px solid var(--my-main-black);
+  background-color: azure;
+}
