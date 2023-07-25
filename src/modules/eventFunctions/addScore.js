@@ -1,40 +1,23 @@
 import axios from 'axios';
-//import { displayScores } from './displayScores.js';
-import { scoresLink } from '../../global.js';
+import { scoresUrl } from '../globalElements/global.js';
+import { setNewDataAdded } from '../globalElements/dataUtils.js';
 
 const addEventFunction = async () => {
-  let userInput = document.getElementById('user').value;
-  let scoreInput = document.getElementById('score').value;
+  const userInput = document.getElementById('user').value;
+  const scoreInput = document.getElementById('score').value;
 
   try {
-    //No function in here; Put the link
-    const response = await axios.post(scoresLink, {
+    const response = await axios.post(scoresUrl, {
       user: userInput,
-      score: scoreInput
+      score: scoreInput,
     });
+    setNewDataAdded(false);
+    window.location.reload();
     return response.data.result;
   } catch (error) {
-    console.error(`Could not create score: ${error}`);
-    throw error;
+    const errorMessage = `Couldn't create the score, ${error}`;
+    return Promise.reject(errorMessage);
   }
+};
 
-}
-//displayScores();
-//Scores are not displayed on submit addScores
-
-/* 
-const addEventFunction = async(user, score) => {
-  fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`, {
-    method: 'POST',
-    body: JSON.stringify({
-      user: user,
-      score: score
-      }),
-    headers: {
-      'Content-type': 'application/json, charset=UTF-8',
-    },
-  })
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-}; */
 export default addEventFunction;

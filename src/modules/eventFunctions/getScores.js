@@ -1,18 +1,16 @@
 import axios from 'axios';
-import { scoresLink } from '../../global';
+import { scoresUrl } from '../globalElements/global.js';
 
 const getScores = async () => {
   try {
-    const response = await axios.get(scoresLink);
-    const scores = response.data.result;  //REMOVE RESULT IN YOUR LOCAL ENVIRONEMENT
-    
-    // Sort the scores by index 
-    //scores.sort((a, b) => a.index - b.index);  //UNCOMMENT IN YOUR LOCAL ENVIRONMENT
+    const response = await axios.get(scoresUrl);
+    const scores = response.data.result;
+
     return scores;
   } catch (error) {
-    console.error(`Could not get scores: ${error}`);
-    throw error;
+    const errorMessage = `Couldn't create the score, ${error}`;
+    return Promise.reject(errorMessage);
   }
-}
+};
 
 export default getScores;

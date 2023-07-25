@@ -1,38 +1,29 @@
-import getScores from "./getScores.js";
-//import axios from "axios";
-
+import getScores from './getScores.js';
 
 const displayAllScores = document.querySelector('#list');
-export const displayScores = async () => {
-  
-  try{
+const displayScores = async () => {
+  try {
+    const scores = await getScores();
+    const validScores = scores.filter((score) => score.user !== '');
+    validScores.sort((a, b) => a.user.localeCompare(b.user, undefined, { sensitivity: 'base' }));
 
-    const scores = await getScores(); 
-    console.log(scores);
-
-    scores.forEach((score) => {
-      
-
+    validScores.forEach((score) => {
       const scoreCard = document.createElement('li');
-      const removeButton = document.createElement('button');
-      removeButton.setAttribute('class', 'button');
-      removeButton.classList.add('my-button-container');
+      const displayButton = document.createElement('button');
+      displayButton.setAttribute('class', 'button');
+      displayButton.classList.add('my-button-container');
 
-      const myScoreElements = document.createElement('div')
+      const myScoreElements = document.createElement('div');
       myScoreElements.textContent = `${score.user}: ${score.score}`;
-          
       scoreCard.appendChild(myScoreElements);
-      
       displayAllScores.appendChild(scoreCard);
       scoreCard.classList.add('feature-stack');
-    })
-    //}
+    });
+    return 'Success';
   } catch (error) {
-    console.error('Error populating scores:', error);
+    const errorMessage = `Couldn't create the score, ${error}`;
+    return Promise.reject(errorMessage);
   }
-  
 };
 
-
-
-
+export default displayScores;
