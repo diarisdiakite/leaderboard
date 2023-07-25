@@ -42,7 +42,7 @@
 ## 📖 [leaderboard-project](#leaderboard-project)
 ### 📖 <a name="about-the-project">Description </a>
 
-[leaderboard-project] is a Single Page App that allows users to create add players and scores and perform basics operations like list all score and delete a score from the application.
+The [Leaderboard-project]() is a Single Page App that allows users to keep track of their performances in a game by adding players and scores and perform basics operations like list all scores from the application. The players are sorted by name to give users a better experience.
 
 [`Back to top`](#readme-top)
 
@@ -63,13 +63,12 @@ client: HTML, CSS and Javascript.
 `leaderboard-project` key features are the following main projects:
 
 ```
-Project-feature&: get all scores from API 
-Project-feature2: Add score 
-Project-feature4: Remove score.s 
-Project-feature4: Delete all completed score
-Project-feature5: List all scores
-Project-feature7: Optimisation
-Project-feature8: Application deploy
+Project-feature1: Create a new game from API 
+Project-feature2: get all scores from API 
+Project-feature3: Add score 
+Project-feature4: List all scores
+Project-feature5: Optimisation
+Project-feature6: Application deploy
 
 ```
 
@@ -135,7 +134,7 @@ You can deploy the leaderboard application using: google cloud, Microsoft Azure,
 
 GitHub: [@diarisd](github.com/diarisdiakite)
 <br> Twitter: [@diarisdiakite](www.twitter.com/diarisdiakite)
-<br> LinkedIn: [https://www.linkedin.com/in/diariatou-diakite-67ab80165/]()
+<br> LinkedIn: [@diariatou-diakite](https://www.linkedin.com/in/diariatou-diakite-67ab80165/)
 <br><br>
 
 [`Back to top`](#readme-top)
@@ -157,14 +156,14 @@ Please check the issues page.
 
 ## ⭐️ <a name="show-your-support">Show your support</a>
 If you like my [leaderboard]() you can support my work. Visit [my personal page](https://diarisdiakite.github.io/my-portfolio/).
-Please follow us on [@linkedin.com/diarisd]() and [@twitter.com/diarisd]()
+Please follow us on [@linkedin.com/diariatou-diakite](https://www.linkedin.com/in/diariatou-diakite-67ab80165/) and [@twitter.com/diarisd](https://twitter.com/diarisdiakite)
 
 [`Back to top`](#readme-top)
 
 ## 🙏 <a name="acknowledgments">Acknowledgments</a>
 I would like to thank the Microverse community to inspire and encourage everyday programmers and aspiring programmers.
 
-Many thanks to my coding partners and particularly to [@Roman-adi](@obj583) and [lincoln Gibson](https://github.com/lincoln1883) for their great hints during my Microverse Journey. 
+Many thanks to my coding partners and particularly to [@Roman-adi](https://github.com/romans-adi) and [lincoln Gibson](https://github.com/lincoln1883) for their great hints during my Microverse Journey. 
 
 [`Back to top`](#readme-top)
 
