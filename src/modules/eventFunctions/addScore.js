@@ -1,22 +1,23 @@
 import axios from 'axios';
-import { scoresUrl } from '../../global.js';
+import { scoresUrl } from '../globalElements/global.js';
+import { setNewDataAdded } from '../globalElements/dataUtils.js';
 
 const addEventFunction = async () => {
-  let userInput = document.getElementById('user').value;
-  let scoreInput = document.getElementById('score').value;
+  const userInput = document.getElementById('user').value;
+  const scoreInput = document.getElementById('score').value;
 
   try {
     const response = await axios.post(scoresUrl, {
       user: userInput,
-      score: scoreInput
+      score: scoreInput,
     });
-    window.location.reload()
+    setNewDataAdded(false);
+    window.location.reload();
     return response.data.result;
   } catch (error) {
-    console.error(`Could not create score: ${error}`);
-    throw error;
+    const errorMessage = `Couldn't create the score, ${error}`;
+    return Promise.reject(errorMessage);
   }
-
-}
+};
 
 export default addEventFunction;
