@@ -5,7 +5,6 @@ module.exports = {
   mode: 'development',
   entry: {
     main: './src/index.js',
-    // print: './src/print.js',
   },
   devServer: {
     static: './dist',

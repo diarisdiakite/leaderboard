@@ -18,7 +18,6 @@ refreshButton.addEventListener('click', async (e) => {
   }
 });
 
-const addButton = document.querySelector('#addScore');
 const clearInputFields = () => {
   document.getElementById('user').value = '';
   document.getElementById('score').value = '';
@@ -31,3 +30,4 @@ addButton.addEventListener('click', async () => {
 
 const myFooter = document.getElementById('footer-section');
 myFooter.innerHTML += footerText;
+

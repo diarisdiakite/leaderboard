@@ -70,7 +70,7 @@ header {
 }
 
 .div {
-  width: 40%; /* remove width */
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,6 +137,20 @@ button {
   box-shadow: rgba(0, 0, 0, 0.66) 0 1px 4px;
   cursor: pointer;
   align-self: end;
+}
+
+.add-button:hover,
+button:hover {
+  background-color: rgb(209, 200, 190);
+}
+
+#inputs {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .add-button:hover,

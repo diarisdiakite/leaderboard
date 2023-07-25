@@ -44,6 +44,7 @@
 
 [leaderboard-project] is a Single Page App that allows users to keep track of their performances in a game by adding players and scores and perform basics operations like list all scores from the application. The players are sorted by name to give users a better experience.  
 
+
 [`Back to top`](#readme-top)
 
 ### 🛠 <a name="project-built-with">Built With </a>
