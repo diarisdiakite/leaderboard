@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { scoresLink } from '../../global';
+import { scoresUrl } from '../../global';
 
 const getScores = async () => {
   try {
-    const response = await axios.get(scoresLink);
+    const response = await axios.get(scoresUrl);
     const scores = response.data.result;  //REMOVE RESULT IN YOUR LOCAL ENVIRONEMENT
     
     // Sort the scores by index 
