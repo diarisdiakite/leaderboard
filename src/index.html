@@ -6,35 +6,66 @@
     <title>Leaderboard</title>
 </head>
 <body>
+  <header class="">
+    <h1 class="feature-title">Leaderboard</h1>
+    <div id="save-game"></div>
+  </header>      
   <main>
-    <header>
-      <h1 class="feature-title">Leaderboard</h1>
-    </header>      
+    
     <!-- Display all scores -->
     <div class="feature-container">
-
       <section class="feature-list">
-        <h2 class="feature-subTitle" id="list-subtitle">Recent scores</h2>
+        <h2 class="feature-subTitle flex" id="list-subtitle">Recent scores</h2>
         <div class="display-section" id="list"></div>
       </section>
       
+     <!--  <div class="display-section">  -->
       
-      <!-- Add new score form  ADD _hide_ TO CLASS LIST AFTER ADJUSTING-->
-      <div class="div"> <!-- hide --> 
-        <h2 class="feature-subTitle">Add a new score</h2>
-        <div id="inputs">
-          <input class="name-input" id="user" name="user" type="text" placeholder="User">
-          <input class="points-input" id="score" name="score" type="number" placeholder="Score">
-          <button class="add-button" id="addScore" type="submit">Add</button>
+        <!-- add score starts -->
+        <div class="div" id="form-elements"> <!-- hide --> 
+          <h2 class="feature-subTitle">Add a new score</h2>
+          <div id="inputs">
+            <input class="name-input" id="user" name="user" type="text" placeholder="User">
+            <input class="points-input" id="score" name="score" type="number" placeholder="Score">
+            <button class="add-button" id="addScore" type="submit">Add</button>
+          </div>
         </div>
-      </div>
+        <!-- form ends -->
+
+        <!-- Poduim starts -->
+        <div class="results hide" id="display-results">
+          <div class="flex finalists">
+            <div class="second flex-column">
+              <div class="winner flex">
+                <div class="winner-number"><h2>2</h2></div>
+              </div>
+              <div class="winner-2"><h2 id="winner-2"></h2></div>
+              <div class="poduim p2"></div>
+            </div>
+            <div class="first flex-column">
+              <div class="winner flex">
+                <div class="winner-number"><h2>1</h2></div>
+              </div>
+              <div class="winner-1"><h2 id="winner-1"></h2></div>
+              <div class="poduim p1"></div>
+            </div>
+            <div class="third flex-column">
+              <div class="winner flex">
+                <div class="winner-number"><h2>3</h2></div>
+              </div>
+              <div class="winner-3"><h2 id="winner-3">name</h2></div>
+              <div class="poduim p3"></div>
+            </div>
+          </div>
+        </div>
+        <!-- end of poduim -->
+
+      <!-- </div> -->
     </div>
+    
   </main>
-
+  
   <!-- Footer -->
-  <footer class="footer-section" id="footer-section"> <!--remove class hide --> 
-      
-  </footer>
-
+  <footer class="footer-section" id="footer-section"></footer>
 </body>
 </html>

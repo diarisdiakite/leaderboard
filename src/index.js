@@ -1,7 +1,14 @@
 import './style.css';
 import displayScores from './modules/eventFunctions/displayScores.js';
-import addEventFunction from './modules/eventFunctions/addScore.js';
+import addScoreEventFunction from './modules/eventFunctions/addScore.js';
 import footerText from './modules/globalElements/footer.js';
+import saveGameEventFunction from './modules/eventFunctions/saveGame.js';
+
+const saveGame = document.getElementById('save-game');
+const saveGameButton = document.createElement('button');
+saveGameButton.classList.add('add-button', 'save-game-button', 'my-button-animation');
+saveGameButton.textContent = 'Save game and see the winners';
+saveGame.appendChild(saveGameButton);
 
 let newDataAdded = false;
 
@@ -18,15 +25,19 @@ refreshButton.addEventListener('click', async (e) => {
   }
 });
 
-const addButton = document.querySelector('#addScore');
+const addScoreButton = document.querySelector('#addScore');
 const clearInputFields = () => {
   document.getElementById('user').value = '';
   document.getElementById('score').value = '';
 };
 
-addButton.addEventListener('click', async () => {
-  await addEventFunction();
+addScoreButton.addEventListener('click', async () => {
+  await addScoreEventFunction();
   clearInputFields();
+});
+
+saveGameButton.addEventListener('click', async () => {
+  await saveGameEventFunction();
 });
 
 const myFooter = document.getElementById('footer-section');
