@@ -5,7 +5,7 @@ import { setNewDataAdded } from '../globalElements/dataUtils.js';
 const addScoreEventFunction = async () => {
   const userInput = document.getElementById('user').value;
   const scoreInput = document.getElementById('score').value;
-  
+
   try {
     const response = await axios.post(scoresUrl, {
       user: userInput,

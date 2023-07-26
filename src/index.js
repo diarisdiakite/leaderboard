@@ -2,15 +2,13 @@ import './style.css';
 import displayScores from './modules/eventFunctions/displayScores.js';
 import addScoreEventFunction from './modules/eventFunctions/addScore.js';
 import footerText from './modules/globalElements/footer.js';
-import displayWinners from './modules/eventFunctions/displayWinners';
-import saveGameEventFunction from './modules/eventFunctions/saveGame';
+import saveGameEventFunction from './modules/eventFunctions/saveGame.js';
 
-const saveGame = document.getElementById('save-game')
+const saveGame = document.getElementById('save-game');
 const saveGameButton = document.createElement('button');
-saveGameButton.classList.add('add-button', 'save-game-button')
-saveGameButton.textContent = 'Save your game and see the winners'
+saveGameButton.classList.add('add-button', 'save-game-button');
+saveGameButton.textContent = 'Save your game and see the winners';
 saveGame.appendChild(saveGameButton);
-
 
 let newDataAdded = false;
 
@@ -40,7 +38,7 @@ addScoreButton.addEventListener('click', async () => {
 
 saveGameButton.addEventListener('click', async () => {
   await saveGameEventFunction();
-})
+});
 
 const myFooter = document.getElementById('footer-section');
 myFooter.innerHTML += footerText;

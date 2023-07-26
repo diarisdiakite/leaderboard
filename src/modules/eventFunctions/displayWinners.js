@@ -1,4 +1,4 @@
-import getScores from "./getScores.js";
+import getScores from './getScores.js';
 
 const displayWinners = async () => {
   const displayResults = document.getElementById('display-results');
@@ -9,10 +9,10 @@ const displayWinners = async () => {
   try {
     const scores = await getScores();
     const validScores = scores.filter((score) => score.user !== null);
-    
+
     // Sort scores in descending order
     validScores.sort((a, b) => b.score - a.score);
-    
+
     // Get the top 3 winners
     const top3Winners = validScores.slice(0, 3);
 
@@ -23,7 +23,7 @@ const displayWinners = async () => {
 
     // Show the display results section
     displayResults.classList.remove('hide');
-
+    return top3Winners;
   } catch (error) {
     const errorMessage = `Couldn't get the scores ${error}`;
     return Promise.reject(errorMessage);
