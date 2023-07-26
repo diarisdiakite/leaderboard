@@ -17,7 +17,8 @@ const refreshButton = document.createElement('button');
 refreshButton.classList.add('button', 'add-button');
 refreshButton.textContent = 'Refresh';
 listSubtitle.appendChild(refreshButton);
-refreshButton.disabled = true;
+// Disable refreshButton when scores displayed on add 
+// refreshButton.disabled = true;
 refreshButton.addEventListener('click', async (e) => {
   e.preventDefault();
   if (!newDataAdded) {

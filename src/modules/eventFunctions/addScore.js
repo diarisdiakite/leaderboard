@@ -20,5 +20,9 @@ const addScoreEventFunction = async () => {
     return Promise.reject(errorMessage);
   }
 };
-displayScores();
+/* To display scores on add, 
+  (1) call displayScores at the end of the function
+  (2) + Disable refreshButton in index.js
+// displayScores();
+*/
 export default addScoreEventFunction;
