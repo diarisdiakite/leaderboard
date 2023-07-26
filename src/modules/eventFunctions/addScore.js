@@ -2,10 +2,10 @@ import axios from 'axios';
 import { scoresUrl } from '../globalElements/global.js';
 import { setNewDataAdded } from '../globalElements/dataUtils.js';
 
-const addEventFunction = async () => {
+const addScoreEventFunction = async () => {
   const userInput = document.getElementById('user').value;
   const scoreInput = document.getElementById('score').value;
-
+  
   try {
     const response = await axios.post(scoresUrl, {
       user: userInput,
@@ -20,4 +20,4 @@ const addEventFunction = async () => {
   }
 };
 
-export default addEventFunction;
+export default addScoreEventFunction;
