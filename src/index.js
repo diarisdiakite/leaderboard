@@ -1,14 +1,44 @@
-import _ from 'lodash';
 import './style.css';
+import displayScores from './modules/eventFunctions/displayScores.js';
+import addScoreEventFunction from './modules/eventFunctions/addScore.js';
+import footerText from './modules/globalElements/footer.js';
+import saveGameEventFunction from './modules/eventFunctions/saveGame.js';
 
-function component() {
-  const element = document.createElement('div');
+const saveGame = document.getElementById('save-game');
+const saveGameButton = document.createElement('button');
+saveGameButton.classList.add('add-button', 'save-game-button', 'my-button-animation');
+saveGameButton.textContent = 'Save game and see the winners';
+saveGame.appendChild(saveGameButton);
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+let newDataAdded = false;
 
-  return element;
-}
+const listSubtitle = document.getElementById('list-subtitle');
+const refreshButton = document.createElement('button');
+refreshButton.classList.add('button', 'add-button');
+refreshButton.textContent = 'Refresh';
+listSubtitle.appendChild(refreshButton);
+refreshButton.addEventListener('click', async (e) => {
+  e.preventDefault();
+  if (!newDataAdded) {
+    await displayScores();
+    newDataAdded = true;
+  }
+});
 
-document.body.appendChild(component());
+const addScoreButton = document.querySelector('#addScore');
+const clearInputFields = () => {
+  document.getElementById('user').value = '';
+  document.getElementById('score').value = '';
+};
+
+addScoreButton.addEventListener('click', async () => {
+  await addScoreEventFunction();
+  clearInputFields();
+});
+
+saveGameButton.addEventListener('click', async () => {
+  await saveGameEventFunction();
+});
+
+const myFooter = document.getElementById('footer-section');
+myFooter.innerHTML += footerText;

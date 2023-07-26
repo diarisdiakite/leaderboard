@@ -12,23 +12,32 @@
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "browserify-zlib": "^0.2.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.27.5",
     "hint": "^2.0.0",
     "html-webpack-plugin": "^5.5.1",
+    "https-browserify": "^1.0.0",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
     "style-loader": "^3.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0",
+    "url-util": "^1.2.10",
     "webpack": "^5.82.0",
     "webpack-cli": "^5.1.0",
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "animate.css": "^4.1.1",
+    "axios": "^1.4.0",
+    "json-server": "^0.17.3",
+    "lodash": "^4.17.21",
+    "luxon": "^3.3.0"
   },
   "main": "webpack.config.js",
   "description": ""
