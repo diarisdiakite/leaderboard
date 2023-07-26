@@ -1,11 +1,10 @@
 import getScores from './getScores.js';
 import 'animate.css';
 
-
 const displayWinners = async () => {
   const displayResults = document.getElementById('display-results');
   const winner1 = document.getElementById('winner-1');
-  winner1.classList.add('my-winner-animation')
+  winner1.classList.add('my-winner-animation');
   const winner2 = document.getElementById('winner-2');
   const winner3 = document.getElementById('winner-3');
 
