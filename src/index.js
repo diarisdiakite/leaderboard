@@ -7,7 +7,7 @@ import saveGameEventFunction from './modules/eventFunctions/saveGame.js';
 const saveGame = document.getElementById('save-game');
 const saveGameButton = document.createElement('button');
 saveGameButton.classList.add('add-button', 'save-game-button');
-saveGameButton.textContent = 'Save your game and see the winners';
+saveGameButton.textContent = 'Save game and see the winners';
 saveGame.appendChild(saveGameButton);
 
 let newDataAdded = false;
