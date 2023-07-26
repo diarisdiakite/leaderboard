@@ -10,9 +10,9 @@
     <h1 class="feature-title">Leaderboard</h1>
   </header>      
   <main>
+    
     <!-- Display all scores -->
     <div class="feature-container">
-
       <section class="feature-list">
         <h2 class="feature-subTitle flex" id="list-subtitle">Recent scores</h2>
         <div class="display-section" id="list"></div>
@@ -20,10 +20,10 @@
       
       
       <!-- Add new score form  ADD _hide_ TO CLASS LIST AFTER ADJUSTING-->
-      <div class="display-section"> <!-- display result or add new -->
+     <!--  <div class="display-section">  -->
       
         <!-- add score starts -->
-        <div class="div hide"> <!-- hide --> 
+        <div class="div" id="form-elements"> <!-- hide --> 
           <h2 class="feature-subTitle">Add a new score</h2>
           <div id="inputs">
             <input class="name-input" id="user" name="user" type="text" placeholder="User">
@@ -34,34 +34,33 @@
         <!-- form ends -->
 
         <!-- Poduim starts -->
-        <div class="results">
-          podiuim here
+        <div class="results hide" id="display-results">
           <div class="flex finalists">
-            <div class="second flex">
+            <div class="second flex-column">
               <div class="winner">2</div>
+              <div class="winner-2" id="winner-2">name</div>
               <div class="poduim p2"></div>
             </div>
-            <div class="first flex">
+            <div class="first flex-column">
               <div class="winner">1</div>
+              <div class="winner-1" id="winner-1">name</div>
               <div class="poduim p1"></div>
             </div>
-            <div class="third flex">
+            <div class="third flex-column">
               <div class="winner">3</div>
+              <div class="winner-3" id="winner-3">name</div>
               <div class="poduim p3"></div>
             </div>
           </div>
         </div>
         <!-- end of poduim -->
 
-      </div>
-
+      <!-- </div> -->
     </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer-section" id="footer-section"> <!--remove class hide --> 
     
-  </footer>
-
+  </main>
+  <div id="save-game"></div>
+  <!-- Footer -->
+  <footer class="footer-section" id="footer-section"></footer>
 </body>
 </html>
